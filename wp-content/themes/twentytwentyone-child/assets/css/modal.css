@@ -1,0 +1,287 @@
+
+
+.modal_open{
+    display: inline-block;
+    float: left; 
+    cursor: pointer;
+}
+ 
+.modal_box {
+    position:fixed;
+    z-index: 7777;
+    display: none;
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 12% 9%;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: auto;
+    max-height:90vh;
+}
+
+
+.modal_box div.wrapper {
+    text-align:left;
+}
+
+.modal_box img.profile {
+    width: 100%;
+    max-width:150px;
+    margin-bottom: 30px;
+}
+
+.modal_box div.wrapper-jpn,
+.modal_box div.wrapper-eng {
+    text-align:left;
+    line-height: 1em;
+    float: right;
+    width: 62%;
+}
+
+.modal_box div.wrapper-eng {
+    clear: both;
+    margin-top: 40px;
+}
+
+.modal_box h2 {
+    font-size: 1.3em;
+    margin-bottom: 1.5em;
+    margin-top: 0;
+}
+
+.modal_box h2 span {
+    font-size: 0.5em;
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+.modal_box table {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    width: 100%;
+}
+
+.modal_box table th {
+    font-weight: normal;
+    padding-right: 1em;
+    white-space: nowrap;
+    vertical-align: top;
+    width: 16%;
+}
+
+.modal_box table td {
+    padding-bottom: 0.6em;
+    width: 84%;
+}
+
+.modal_box dl {
+    line-height: 1em;
+    display: inline-block;
+    font-size: 0.9em;
+    width: 100%;
+    margin: 0;
+}
+
+
+.modal_box dt,
+.modal_box dd{
+    margin-bottom: 1em;
+    display: inline-block;
+    line-height: 1.4em;
+}
+
+
+.modal_box dt {
+    float:left;
+    width: 22%;
+    padding-right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+}
+
+.modal_box dd {
+    float: right;
+    width: 78%;
+    margin: 0 0 0.5em 0;
+}
+
+.modal_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 62px;
+    font-size: 2em;
+    color: #666;
+    line-height: 62px;
+    text-align: center;
+    cursor: pointer;
+}
+ 
+.modal_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6666;
+    display: none;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal_link_prev,
+.modal_link_next    {
+    position: fixed;
+    font-weight: bold;
+    top: 47vh;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.modal_link_prev a,
+.modal_link_next a    {
+    color:#FFF;
+    
+}
+
+.modal_link_prev a:hover,
+.modal_link_next a:hover    {
+    opacity: 0.5;
+    
+}
+
+.modal_link_prev   {
+    left: 2%;
+}
+
+.modal_link_next   {
+    right: 2%;
+}
+
+
+/*  ウィンドウサイズ640px以上の時のスタイル  */
+@media screen and (min-width: 960px) {
+ 
+  .modal_box {
+      padding: 6% 2% 6% 6%;
+  }
+    
+.modal_box img.profile {
+    float:left;
+}
+
+.modal_box div.wrapper-jpn,
+.modal_box div.wrapper-eng {
+    float: left;
+    width: 34%;
+    margin-left: 3%;
+}
+
+.modal_box dt {
+    width: 27%;
+}
+
+.modal_box dd {
+    width: 73%;
+}
+    
+.modal_box div.wrapper-eng {
+    clear:none;
+    margin-top: 0;
+}
+    
+    
+}
+
+
+/*  ウィンドウサイズ1280px以上の時のスタイル  */
+@media screen and (min-width: 1280px) {
+ 
+
+  .modal_box {
+      padding: 6% 4% 6% 6%;
+  }
+
+.modal_box div.wrapper-jpn,
+.modal_box div.wrapper-eng {
+    width: 36%;
+    margin-left: 5%;
+}
+
+.modal_box dt {
+    width: 17%;
+}
+
+.modal_box dd {
+    width:83%;
+}    
+
+    
+}
+
+
+/*  ウィンドウサイズ640px以下の時のスタイル  */
+@media screen and (max-width: 640px) {
+
+ 
+  .modal_box {
+      padding: 12% 9%;
+  }
+ 
+.modal_box div.wrapper {
+    text-align: center;
+}
+ 
+.modal_box dl {
+    font-size: 0.8em;
+}
+    
+.modal_box h2 {
+    font-size: 1.1em;
+}
+
+.modal_box h2 span {
+    font-size: 0.5em;
+}
+    
+.modal_box div.wrapper-jpn,
+.modal_box div.wrapper-eng {
+    float:none;
+    width: 100%;
+}
+
+.modal_box dt {
+    width: 25%;
+}
+
+.modal_box dd {
+    width: 75%;
+}
+    
+  .modal_close {
+      width: 40px;
+      line-height: 40px;
+      font-size: 30px;
+  }
+ 
+  .link_area {
+      margin: 25px auto 0;
+  }
+ 
+  .link_area .modal_link a {
+      margin: 15px auto 0;
+  }
+ 
+  .link_area ul li.modal_link:first-child a {
+      float: none;
+      margin-top: 0;
+  }
+ 
+  .link_area ul li.modal_link:last-child a {
+      float: none;
+  }
+ 
+}

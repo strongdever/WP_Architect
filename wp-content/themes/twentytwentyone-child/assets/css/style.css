@@ -1,0 +1,976 @@
+@charset "utf-8";
+
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+共通設定およびスマートフォン向けスタイル
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+
+
+body	{
+	width:100%;
+	background-color:#FFF;
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+	color:#231916;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+	color:#231916;
+	text-decoration:none;
+}
+
+a.lighten:hover {
+    opacity: 0.5;
+}
+
+a.nolink {
+    pointer-events: none;
+}
+
+h1,
+div#home-menu h1{
+    max-width: 125px;
+    display: inline-block;
+    margin: 0;
+}
+
+div#home-menu h1{
+    width: 100%;
+}
+
+img.mono {
+    filter: grayscale(100%);
+}
+
+img.logo,
+div#home-menu img.logo {
+	vertical-align:middle;
+    width: 100%;    
+}
+
+ul#category_menu {
+    display : -webkit-inline-box;
+	display : -ms-inline-flexbox;
+	display : -webkit-inline-flex;
+	display : inline-flex;
+    align-items: center;
+    list-style: none;
+    margin: -80px 0 0 0;
+    padding: 0;
+    transform: rotate(90deg);
+    transform-origin: 0 100%;
+    height: 40px;
+    position: fixed;
+}
+
+div#home-menu ul#category_menu {
+    margin: -40px 0 0 0;
+}
+
+ul#category_menu li {
+    margin-left: 30px;
+    line-height: 1em;
+    float: left;
+    font-size: 0.8em;
+}
+
+ul#category_menu li a {
+    display:inline-block;
+    padding: 2px 4px;
+}
+
+ul#category_menu li a.active {
+    background-color: #231916;
+    color: #FFF;
+}
+
+ul#category_menu li a:hover {
+    background-color: #231916;
+    color: #FFF;
+}
+
+/*========================================================================
+Global Navigation
+========================================================================*/
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+nav article {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items:stretch;
+    text-align: center;
+}
+
+nav article.selected {
+    background-color: yellow;
+}
+
+nav article.selected a {
+    pointer-events: none;
+}
+
+nav article {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items:stretch;
+    text-align: center;
+}
+
+nav article a {
+    display:flex;
+    width: 100%;
+    padding: 14%;
+    align-items: center;
+    justify-content:space-around;
+    line-height: 1em;
+}
+
+nav article a:hover {
+    background-color:#FFFF00;
+}
+
+nav article div.wrapper {
+    text-align:justify;
+    text-justify: inter-ideograph; /* IE用 */
+    max-width: 235px;
+    max-height: 120px;
+    overflow:hidden;
+    display: -webkit-box;
+}
+
+nav article .date {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 0.7em;
+    color: #AEAEAE;
+}
+
+nav article small {
+    margin-right: 3px;
+}
+
+
+nav article div.wrapper-thumbnail {
+    background-color: darkkhaki;
+    display: inline-block;
+    line-height:0;
+}
+
+
+nav article img.landscape {
+    max-width: 235px;
+    width: 100%;
+}
+
+nav article img.portrait {
+    max-height: 245px;
+    width:auto;
+}
+
+nav article h2 {
+    display: inline;
+    font-size: 21px;
+    line-height: 1em;
+}
+
+nav article h3 {
+    display: inline;
+    font-size: 12px;
+    line-height: 1em;
+    font-weight: normal;
+}
+
+nav article p.jpn {
+    display: inline;
+    font-size: 12px;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+nav article p.eng {
+    display: inline;
+    font-size: 12px;
+    line-height: 1em;
+}
+
+
+/*========================================================================
+FOOTER
+========================================================================*/
+
+footer,
+div#home-menu footer {
+    position: fixed;
+    bottom: 0;
+    width: 40px;
+    height: 260px;
+}
+
+div#home-menu footer {
+    margin-bottom: 0;
+    z-index: 5;
+}
+
+
+footer ul.sns,
+div#home-menu footer ul.sns {
+    list-style: none;
+    display: inline-block;
+    width: 40px;
+    margin: 0 0 15px -40px;
+    text-align: center;
+}
+
+div#home-menu footer ul.sns {
+    padding:0;
+    margin: 0 0 15px -30px;
+    width: 0;
+}
+
+footer ul.sns img,
+div#home-menu footer ul.sns img {
+    width:16px;
+}
+
+footer p.copyrights,
+div#home-menu footer p.copyrights {
+    transform: rotate(90deg);
+    display: inline-block;
+    transform-origin:14px 14px;
+    font-size: 0.66em;
+    white-space: nowrap;
+}
+
+/*========================================================================
+Toggle Button
+========================================================================*/
+
+.toggle {
+    display: block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;/*カーソルが乗ったらポインターに変化させる*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    z-index:3;
+    }
+
+.toggle span {
+    display: block;
+    position: absolute;
+    width: 25px;
+    border-bottom: solid 3px #333;/*ボーダーで実装*/
+    -webkit-transition: 0.2s ease;/*変化の速度を指定*/
+    -moz-transition: 0.2s ease;	/*変化の速度を指定*/
+    transition: 0.2s ease;	/*変化の速度を指定*/
+}
+
+.toggle span:nth-child(1) {
+    top:5px;
+}
+ .toggle span:nth-child(2) {
+    top: 12px;
+}
+ .toggle span:nth-child(3) {
+    top: 20px;
+}
+ 
+.toggle.active span:nth-child(1) {
+    top: 12px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+ 
+.toggle.active span:nth-child(2),
+.toggle.active span:nth-child(3) {
+    top: 12px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#home-menu {
+    display: none;
+    width: 100vw;
+    position:absolute;
+    z-index: 2;
+}
+
+
+/*========================================================================
+Footer other than HOME
+========================================================================*/
+
+#aboutus footer {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position:static;
+    bottom: 0;
+    margin-top: 90px;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+#single footer {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position:static;
+    margin-bottom: 30px;
+}
+
+#aboutus footer ul.sns,
+#single footer ul.sns{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#aboutus footer ul.sns li,
+#single footer ul.sns li {
+    width:22px;
+    line-height: 0;
+    margin: 0 4px;
+}
+
+div#home-menu footer ul.sns li {
+    line-height: 1.5em;
+}
+
+#aboutus footer ul.sns img,
+#single footer ul.sns img{
+    width:100%;
+}
+
+#aboutus footer p.copyrights,
+#single footer p.copyrights{
+    transform:none;
+    display: inline-block;
+    transform-origin:unset;
+    font-size: 0.5em;
+}
+
+
+/*========================================================================
+About Us
+========================================================================*/
+
+#aboutus h1 {
+    width: 36%;
+    max-width: none;
+    display: block;
+    margin: 80px auto 60px auto;
+    text-align: center;
+}
+
+#aboutus img.logo {
+    max-width: 260px;
+}
+
+#aboutus ul.headshot {
+    list-style: none;
+    display: flex;
+    line-height: 0;
+    padding: 0;
+    margin: 0 40px;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+
+#aboutus ul.headshot li {
+    margin: 5px;
+    width: 22%
+}
+
+#aboutus ul.headshot li img {
+    width: 100%;
+}
+
+#aboutus h1.company-name {
+    width: 70%;
+    margin: 40px auto;
+    font-size: 1.2em;
+    line-height: 1em;
+}
+
+#aboutus h1.company-name small {
+    font-size: 0.5em;
+    font-weight: normal;
+}
+
+#aboutus p.content {
+    width: 70%;
+    margin: 0 auto 20px auto;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+#aboutus p.content small {
+    font-size: 0.7em;
+    line-height: 1em;
+}
+
+
+/*========================================================================
+Single page (NEWS/WORKS)
+========================================================================*/
+
+#single h1 {
+    width: 22%;
+    line-height: 0;
+    margin: 20px;
+}
+
+#sinble img.logo {
+    max-width: 100px;
+}
+
+#single div.prev-button,
+#single div.next-button {
+    display: inline-block;
+    font-weight: bold;
+    top: 47vh;
+    position: fixed;
+}
+
+#single div.prev-button a,
+#single div.next-button a {
+    font-size: 0.4em;
+    letter-spacing: 0.7em;
+    font-weight: normal;
+    display: inline-block;
+    border: 1px solid;
+}
+
+#single div.prev-button a {
+    transform: rotate(-90deg);
+    transform-origin: 50% -50%;
+    padding: 5px 16px;
+    
+}
+
+#single div.next-button a {
+    transform: rotate(90deg);
+    transform-origin: 50% -50%;
+    padding: 5px 16px;
+}
+
+#single div.prev-button a:hover,
+#single div.next-button a:hover {
+    background-color: #231916;
+    color: #fff;
+}
+
+#single div.prev-button {
+    right: 2%;
+}
+
+#single div.next-button {
+    left: 2%;
+}
+
+#single a.nolink {
+    opacity: 0.1;
+}
+
+#single div.wrapper-content {
+    text-align: center;
+    width: 70vw;
+    margin: 5vh auto 15vh auto;
+    display: flow-root;
+}
+
+#single div.thumbnail {
+    line-height: 0;
+    padding-bottom: 60px;
+}
+
+#single div.works div.thumbnail {
+    padding-bottom: 0;
+}
+
+#single div.thumbnail img {
+    width: 100%;
+}
+
+#single div.wrapper-editarea {
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.8em;
+}
+
+#single div.nothumb div.wrapper-editarea {
+    text-align: center;
+}
+
+#single div.wrapper-head {
+    margin-bottom: 60px;
+}
+
+#single div.works div.wrapper-head {
+    margin-bottom: 3em;
+}
+
+#single div.date {
+    color: #AEAEAE;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+}
+
+#single #home-menu div.date {
+    margin-bottom: 0;
+    font-size: 0.7em;
+}
+
+#single h1.article-title-jpn,
+#single h1.article-title-eng {
+    width: 100%;
+    max-width: none;
+}
+
+#single h1.article-title-jpn {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    margin: 0 0 5px 0;
+}
+
+#single h1.article-title-eng {
+    font-size: 0.9em;
+    line-height: 1.8em;
+    font-weight: normal;
+    margin: 0;
+}
+
+#single div.wrapper-editarea img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 90vh;
+}
+
+#single div.wrapper-editarea h2,
+#single div.wrapper-editarea h3,
+#single div.wrapper-editarea h4,
+#single div.wrapper-editarea h5 {
+    text-align: left;
+}
+
+#single div.nothumb p {
+    text-align:left;
+}
+
+/*========================================================================
+WORKS
+========================================================================*/
+
+#single div.works div.wrapper-head {
+    text-align: center;
+}
+
+#single div.works div.thumbnail {
+    margin: 3em auto 0 auto;
+    width: 100%;
+}
+
+#single div.works div.wrapper-editarea {
+    text-align: center;
+}
+
+#single div.works div.wrapper-editarea p {
+    text-align:left;
+    margin: 2em 0;
+}
+
+#single div.works dl.work-detail {
+    margin: 1em 0 0 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    font-size: 0.8em;
+}
+
+#single div.works dl.work-detail dt  {
+    display: inline-block;
+    font-size: 0.5em;
+    opacity: 0.6;
+}
+
+#single div.works dl.work-detail dd  {
+    display: inline-block;
+    margin: 0 1em 0 0.2em;
+}
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+タブレット（縦）向けスタイル：640〜960px
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+@media only screen and (min-width: 640px) {
+
+
+h1,
+div#home-menu h1 {
+    max-width: 180px;
+}
+
+ul#category_menu {
+    margin: -40px 0 0 0;
+}
+    
+nav {
+    margin: 0 40px 40px 40px;
+}
+
+nav article {
+    width: 50%;
+}
+
+nav article a {
+    padding: 15%;
+}
+    
+nav article div.wrapper {
+    max-width: 245px;
+    max-height: 150px;    
+}
+    
+nav article img.landscape {
+    max-width: 245px;
+}
+    
+nav article h2 {
+    font-size: 24px;
+}
+
+nav article p.jpn {
+    font-size: 14px;
+}
+ 
+#aboutus h1 {
+    margin-top: 10%;
+}
+    
+#aboutus img.logo {
+    max-width: 220px;
+}
+    
+#aboutus ul.headshot li {
+    width: 11%;
+}
+
+#single div.nothumb div.wrapper-head {
+    margin-bottom: 90px;
+}
+    
+#single h1 {
+    width: 15%;
+}
+
+#single div.prev-button {
+    right: 1%;
+}
+
+#single div.next-button {
+    left: 1%;
+}
+    
+#single div.thumbnail img {
+    width:auto;
+    max-width: 100%;
+}
+
+#single div.wrapper-editarea {
+    font-size: 1em;
+}
+    
+
+    
+}
+
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+タブレット（横）向けスタイル：960〜1366px
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+@media only screen and (min-width: 960px)  {
+
+
+nav article {
+    width: 33.333%;
+}
+
+nav article a {
+    padding: 15%;
+}
+    
+nav article div.wrapper {
+    max-width: 280px;
+    max-height: 260px;
+}
+    
+nav article img.landscape {
+    max-width: 280px;
+}
+    
+nav article img.portrait {
+    max-height: 260px;
+}
+    
+nav article h2 {
+    font-size: 27px;
+}
+
+nav article h3 {
+    font-size: 14px;
+}
+
+nav article p.jpn {
+    font-size: 16px;
+}
+
+nav article p.eng {
+    font-size: 14px;
+}
+
+#aboutus ul.headshot li {
+    width: 6%;
+}
+    
+#single h1 {
+    width: 12%;
+}
+
+#single div.thumbnail {
+    padding-right: 5%;
+    float: left;
+    width: 35%;
+    text-align:right;
+}
+    
+#single div.works div.thumbnail {
+    padding:0;
+    text-align:center;
+}
+    
+#single div.works div.thumbnail {
+    float:none;
+}
+
+#single h1.article-title-jpn {
+    font-size: 1.8em;
+
+}
+ 
+#single div.wrapper-editarea {
+    float: right;
+    width: 60%
+}
+    
+#single div.works div.wrapper-editarea {
+    float:none;
+    width: 100%;
+}
+    
+#single div.nothumb div.wrapper-editarea  {
+    float: none;
+    width: auto;
+}
+    
+}
+
+
+
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+PC（標準）向けスタイル：1366〜2100px
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+@media only screen and (min-width: 1366px)  {
+    
+
+h1,
+div#home-menu h1 {
+    max-width: 190px;
+}
+
+nav article {
+    width: 25%;
+}
+
+nav article a {
+    padding: 14.9%;
+}
+
+nav article div.wrapper {
+    max-width: 320px;
+    max-height: 280px;
+}
+
+nav article .date {
+    font-size: 0.8em;
+}
+
+nav article img.landscape {
+    max-width: 320px;
+}
+
+nav article img.portrait {
+    max-height: 280px;
+}
+
+nav article h2 {
+    font-size: 33px;
+}
+
+nav article h3 {
+    font-size: 14px;
+}
+
+nav article p.jpn {
+    font-size: 18px;
+}
+
+nav article p.eng {
+    font-size: 14px;
+}
+
+#aboutus ul.headshot li {
+    width: 5%;
+}
+    
+#aboutus ul.headshot li img {
+    max-width: 90px;
+}
+    
+#single h1 {
+    width: 8%;
+}
+
+#single div.wrapper-content {
+    width: 60vw;
+}
+    
+}
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+PC（大画面）向けのスタイル：2100〜2560px
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+@media only screen and (min-width: 2100px)  {
+
+h1 {
+    max-width: 262px;
+}
+   
+nav article {
+    width: 20%;
+}
+
+nav article a {
+    padding: 14.9%;
+}
+
+nav article div.wrapper {
+    max-width: 336px;
+    max-height: 336px;
+}
+
+nav article .date {
+    font-size: 0.9em;
+}
+
+nav article img.landscape {
+    max-width: 336px;
+}
+
+nav article img.portrait {
+    max-height: 336px;
+}
+
+nav article h2 {
+ font-size: 33px;
+}
+
+nav article h3 {
+    font-size: 16px;
+}
+
+nav article p.jpn {
+    font-size: 20px;
+}
+
+nav article p.eng {
+    font-size: 16px;
+}
+
+#aboutus ul.headshot li img {
+    max-width: 150px;
+}
+
+}
+
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+PC（大画面）向けのスタイル：2560px以上
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+@media only screen and (min-width: 2560px)  {
+    
+nav article {
+    width: 16.666%;
+}
+
+}
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+PC（大画面）向けのスタイル：2760px以上
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+@media only screen and (min-width: 2760px)  { 
+    
+nav article {
+    width: 14.285%;
+}
+
+}
+
+/* /_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
+
+PC（大画面）向けのスタイル：3000px以上
+
+_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/*/
+@media only screen and (min-width: 3000px)  { 
+    
+nav article {
+    width: 12.5%;
+}
+
+}
+
+

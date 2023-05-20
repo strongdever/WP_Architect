@@ -127,18 +127,6 @@ class Twenty_Twenty_One_SVG_Icons {
 		'mail'      => array(
 			'mailto:',
 		),
-		'mastodon'  => array(
-			'mastodon.social',
-			'pawoo.net',
-			'mstdn.jp',
-			'mastodon.cloud',
-			'mastodon.online',
-			'counter.social',
-			'mstdn.social',
-			'mas.to',
-			'mastodon.world',
-			'gc2.jp',
-		),
 		'pocket'    => array(
 			'getpocket.com',
 		),
